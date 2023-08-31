@@ -5,12 +5,11 @@ import { Song } from "@/types";
 import Image from "next/image";
 
 interface MediaItemProps {
-    key: string;
-    onClick: (id:string) => void;
+    onClick?: (id:string) => void;
     data: Song;
 }
 
-export default function MediaItem({key, onClick, data}: MediaItemProps) {
+export default function MediaItem({ onClick, data}: MediaItemProps) {
 
     const imageUrl = useLoadImage(data);
 
